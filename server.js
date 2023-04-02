@@ -1,26 +1,35 @@
-var http = require("http")
+var http = require("http");
 
-var PORTONE = 3000;
-var PORTTWO = 8080;
+var PORT = 8080;
+
+var server = http.createServer(handleRequest);
 
 
+function handleRequest(req, res){
+    fs.readFile(_dirname+"/index.html", function(err, data){
+        if (err) throw err;
 
-function handleRequestOne(req, res){
-    res.end("To err is human, but to ..")
+        res.writeHead(200, {"Content-Type": "text/html"});
+        res.end(data)
+    })
 }
 
-function handleRequestTwo(req,res){
-    res.end('Never trust a computer you cant throw out the window')
-}
 
 
-var serverOne = http.createServer(handleRequestOne)
-var serverTwo = http.createServer(handleRequestTwo)
 
-serverOne.listen(PORTONE, function(){
-    console.log("Sever listening  on: http://localhost:"+PORTONE)
-})
 
-serverTwo.listen(PORTTWO, function(){
-    console.log("Sever listening  on: http://localhost:"+PORTTWO)
-})
+
+
+
+
+
+
+
+// Start our server
+server.listen(PORT, function() {
+  // Callback triggered when server is successfully listening. Hurray!
+  console.log("Server listening on: http://localhost:" + PORT);
+});
+
+
+
