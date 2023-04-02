@@ -1,14 +1,26 @@
 var http = require("http")
 
-var PORT = 8080;
+var PORTONE = 3000;
+var PORTTWO = 8080;
 
-function handleRequest(req, res){
-    res.end("server is working on server " + req.url)
+
+
+function handleRequestOne(req, res){
+    res.end("To err is human, but to ..")
+}
+
+function handleRequestTwo(req,res){
+    res.end('Never trust a computer you cant throw out the window')
 }
 
 
-var server = http.createServer(handleRequest);
+var serverOne = http.createServer(handleRequestOne)
+var serverTwo = http.createServer(handleRequestTwo)
 
-server.listen(PORT, function(){
-    console.log("Server is listening on http://localhost:"+PORT)
+serverOne.listen(PORTONE, function(){
+    console.log("Sever listening  on: http://localhost:"+PORTONE)
+})
+
+serverTwo.listen(PORTTWO, function(){
+    console.log("Sever listening  on: http://localhost:"+PORTTWO)
 })
