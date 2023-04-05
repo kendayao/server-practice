@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kendayao/server-practice/issues"
   },
-  "homepage": "https://github.com/kendayao/server-practice#readme"
+  "homepage": "https://github.com/kendayao/server-practice#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
