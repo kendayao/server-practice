@@ -21,7 +21,7 @@ var dartmaul = {
 
 var obiwankenobi = {
   name: "Obi Wan Kenobi",
-  role: "Jedi",
+  role: "Jedi Knight",
   age: 150,
   forcePonts: 1500
 };
@@ -34,16 +34,23 @@ app.get("/", function(req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
 
-app.get("/yoda", function(req, res){
-  res.json(yoda)
-});
+// app.get("/yoda", function(req, res){
+//   res.json(yoda)
+// });
 
-app.get("/darthmaul", function(req, res){
-  res.json(dartmaul)
-});
+// app.get("/darthmaul", function(req, res){
+//   res.json(dartmaul)
+// });
 
-app.get("/obiwankenobi", function(req, res){
-  res.json(obiwankenobi)
+// app.get("/obiwankenobi", function(req, res){
+//   res.json(obiwankenobi)
+
+// })
+
+app.get("/:character", function(req, res){
+  var chosen = req.params.character;
+  console.log(chosen);
+  res.end();
 
 })
 
