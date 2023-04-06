@@ -5,29 +5,28 @@ var PORT = 3000;
 
 // Data
 
-var yoda = {
+
+var characters = [{
+  routeName: "yoda",
   name: "Yoda",
   role: "Jedi Master",
   age: 900,
   forcePonts: 2000
-};
-
-var dartmaul = {
+},{
+  routeName: "darthmaul",
   name: "Darth Maul",
   role: "Sith Lord",
   age: 200,
   forcePonts: 1200
-};
-
-var obiwankenobi = {
+},{
+  routeName: "obiwankenobi",
   name: "Obi Wan Kenobi",
   role: "Jedi Knight",
   age: 150,
   forcePonts: 1500
-};
+}];
 
-
-
+  
 
 // Routes
 app.get("/", function(req, res) {
@@ -47,11 +46,15 @@ app.get("/", function(req, res) {
 
 // })
 
-app.get("/:character", function(req, res){
-  var chosen = req.params.character;
-  console.log(chosen);
-  res.end();
+// app.get("/:character", function(req, res){
+//   var chosen = req.params.character;
+//   console.log(chosen);
+//   res.end();
 
+// })
+
+app.get("/api/characters", function(req,res){
+  return res.json(characters)
 })
 
 
