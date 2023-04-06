@@ -29,6 +29,26 @@ var obiwankenobi = {
 
 
 
+// Routes
+app.get("/", function(req, res) {
+  res.send("Welcome to the Star Wars Page!");
+});
+
+app.get("/yoda", function(req, res){
+  res.json(yoda)
+});
+
+app.get("/darthmaul", function(req, res){
+  res.json(dartmaul)
+});
+
+app.get("/obiwankenobi", function(req, res){
+  res.json(obiwankenobi)
+
+})
+
+
+
 app.listen(PORT, function(){
   console.log("App listening on PORT "+ PORT)
 })
