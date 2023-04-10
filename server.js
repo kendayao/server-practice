@@ -53,10 +53,12 @@ app.get("/", function(req, res) {
 
 // })
 
+// get data for every character
 app.get("/api/characters", function(req,res){
   return res.json(characters)
 })
 
+// get data for specific character
 app.get("/api/characters/:character", function(req,res){
   var chosen = req.params.character;
   console.log(chosen);
