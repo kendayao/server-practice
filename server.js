@@ -2,10 +2,12 @@ var express = require("express")
 var app=express();
 var PORT = 3000;
 
+// Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json())
+
 
 // Data
-
-
 var characters = [{
   routeName: "yoda",
   name: "Yoda",
@@ -62,7 +64,7 @@ app.get("/api/characters", function(req,res){
 app.get("/api/characters/:character", function(req,res){
   var chosen = req.params.character;
   console.log(chosen);
-
+  console.log(characters.length)
   for(var i = 0; i<characters.length; i++){
     if(chosen === characters[i].routeName){
       return res.json(characters[i])
