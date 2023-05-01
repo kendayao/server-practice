@@ -1,0 +1,12 @@
+.main__container {
+    width: 60%;
+    margin: 0 auto
+}
+
+.title__container {
+    background-color: #E9ECEF;
+    border: 1px solid #E9ECEF;
+    border-radius: 10px;
+    padding: 50px 20px
+    
+}
