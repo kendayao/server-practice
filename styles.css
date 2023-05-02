@@ -19,3 +19,18 @@
     width: 240px;
     font-size: 20px;
 }
+
+.search__container {
+    border: 1px solid lightgray;
+    margin: 25px 0;
+    border-radius: 10px;
+}
+
+.search__container h3 {
+    border-bottom: 1px solid lightgray;
+    padding: 5px 0 20px 15px;
+}
+
+.search__container input {
+    width: 95%;
+}
