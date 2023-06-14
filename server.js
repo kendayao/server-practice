@@ -35,18 +35,21 @@ app.get("/", function(req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
 
-app.get("/yoda", function(req, res){
-  res.json(yoda)
-});
+// app.get("/yoda", function(req, res){
+//   var yoda = characters[0]
+//   res.json(yoda)
+// });
 
-app.get("/darthmaul", function(req, res){
-  res.json(dartmaul)
-});
+// app.get("/darthmaul", function(req, res){
+//   var darthmaul = characters[1]
+//   res.json(darthmaul)
+// });
 
-app.get("/obiwankenobi", function(req, res){
-  res.json(obiwankenobi)
+// app.get("/obiwankenobi", function(req, res){
+//   var obiwankenobi = characters[2]
+//   res.json(obiwankenobi)
 
-})
+// })
 
 app.get("/:character", function(req, res){
   var chosen = req.params.character;
