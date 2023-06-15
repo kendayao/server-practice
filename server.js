@@ -36,6 +36,10 @@ app.get("/", function(req, res){
   res.sendFile(path.join(__dirname, "index.html"))
 });
 
+app.get("/add", function(req, res){
+  res.sendFile(path.join(__dirname, "add.html"))
+})
+
 // app.get("/yoda", function(req, res){
 //   var yoda = characters[0]
 //   res.json(yoda)
