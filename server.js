@@ -1,5 +1,6 @@
 var express = require("express")
 var app=express();
+var path = require("path")
 var PORT = 3000;
 
 // Express app to handle data parsing
@@ -31,8 +32,8 @@ var characters = [{
   
 
 // Routes
-app.get("/", function(req, res) {
-  res.send("Welcome to the Star Wars Page!");
+app.get("/", function(req, res){
+  res.sendFile(path.join(__dirname, "index.html"))
 });
 
 // app.get("/yoda", function(req, res){
