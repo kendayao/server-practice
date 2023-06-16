@@ -10,7 +10,7 @@ $("#add-button").on("click", function(event){
 })
 
 
-$.post("/api/character", newCharacters)
+$.post("/api/characters", newCharacters)
     .then(function(data){
         console.log(data)
     })

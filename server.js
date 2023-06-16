@@ -87,6 +87,8 @@ app.get("/api/characters/:character", function(req,res){
 
 app.post("/api/characters", function(req,res){
   var newCharacter = req.body;
+
+  newCharacter.routeName = newCharacter.name.toLowerCase()
   console.log(newCharacter);
   characters.push(newCharacter);
   res.json(newCharacter);
