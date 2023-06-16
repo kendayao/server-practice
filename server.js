@@ -6,6 +6,7 @@ var PORT = 3000;
 // Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
+app.use(express.static('public'))
 
 
 // Data
@@ -33,11 +34,11 @@ var characters = [{
 
 // Routes
 app.get("/", function(req, res){
-  res.sendFile(path.join(__dirname, "index.html"))
+  res.sendFile(path.join(__dirname, "/public/index.html"))
 });
 
 app.get("/add", function(req, res){
-  res.sendFile(path.join(__dirname, "add.html"))
+  res.sendFile(path.join(__dirname, "public/add.html"))
 })
 
 // app.get("/yoda", function(req, res){
