@@ -30,20 +30,25 @@ $("#search-button").on("click",function(event){
         console.log(data)
         if(data){
             $("stats-container").show()
-            $("#id").text(data.name);
-
+            $("#name").text(data.name);
+            $(".text").empty()
 
             pEl=$("<p>")
             pEl.text(data.role)
+            pEl.attr("class", "text")
             $(".stats-container").append(pEl)
 
             pEl=$("<p>")
             pEl.text(data.age)
+            pEl.attr("class", "text")
             $(".stats-container").append(pEl)
 
             pEl=$("<p>")
-            pEl.text(data.forcePoints)
+            pEl.text(data.forcePonits)
+            pEl.attr("class", "text")
             $(".stats-container").append(pEl)
+
+            $("#character-name").val("")
 
 
 

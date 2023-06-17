@@ -15,19 +15,19 @@ var characters = [{
   name: "Yoda",
   role: "Jedi Master",
   age: 900,
-  forcePonts: 2000
+  forcePoints: 2000
 },{
   routeName: "darthmaul",
   name: "Darth Maul",
   role: "Sith Lord",
   age: 200,
-  forcePonts: 1200
+  forcePoints: 1200
 },{
   routeName: "obiwankenobi",
   name: "Obi Wan Kenobi",
   role: "Jedi Knight",
   age: 150,
-  forcePonts: 1500
+  forcePoints: 1500
 }];
 
   
