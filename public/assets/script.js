@@ -44,7 +44,7 @@ $("#search-button").on("click",function(event){
             $(".stats-container").append(pEl)
 
             pEl=$("<p>")
-            pEl.text(data.forcePonits)
+            pEl.text(data.forcePoints)
             pEl.attr("class", "text")
             $(".stats-container").append(pEl)
 
