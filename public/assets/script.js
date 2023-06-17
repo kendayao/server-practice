@@ -20,4 +20,12 @@ $("#add-button").on("click", function(event){
 
 
 
+$("#search-button").on("click",function(event){
+
+    event.preventDefault();
+
+    var searchedCharacter = $("#character-name").val().trim();
+
+    console.log(searchedCharacter)
+})
 
