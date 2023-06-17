@@ -26,6 +26,33 @@ $("#search-button").on("click",function(event){
 
     var searchedCharacter = $("#character-name").val().trim();
 
-    console.log(searchedCharacter)
+    $.get("/api/characters/"+searchedCharacter, function(data){
+        console.log(data)
+        if(data){
+            $("stats-container").show()
+            $("#id").text(data.name);
+
+
+            pEl=$("<p>")
+            pEl.text(data.role)
+            $(".stats-container").append(pEl)
+
+            pEl=$("<p>")
+            pEl.text(data.age)
+            $(".stats-container").append(pEl)
+
+            pEl=$("<p>")
+            pEl.text(data.forcePoints)
+            $(".stats-container").append(pEl)
+
+
+
+
+
+
+
+
+        }
+    })
 })
 
